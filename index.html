@@ -5,5 +5,15 @@
 </head>
 
 <body>
-  <h1>Hello Riot.js!</h1>
+  <app></app>
+
+  <script src="app.riot" type="riot"></script>
+  <script>
+    riot
+      .compile().then(() => {
+        riot.mount('app', {
+          title: 'Hello Riot.js!'
+        })
+      })
+  </script>
 </body>
