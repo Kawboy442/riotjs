@@ -6,13 +6,15 @@
 
 <body>
   <app></app>
-
+  <sub></sub>
   <script src="app.riot" type="riot"></script>
+  <script src="sub.riot" type="riot"></script>
   <script>
     riot
       .compile().then(() => {
-        riot.mount('app', {
-          title: 'Hello Riot.js!'
+        riot.mount('app, sub', {
+          messageToApp: 'Hello App component!!',
+          messageToSub: 'Hello Sub component!!'
         })
       })
   </script>
